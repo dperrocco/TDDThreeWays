@@ -1,17 +1,7 @@
 package org.codecraftuk.TDDThreeWays;
 
-public class Deposit {
-    private int amount;
-
+public class Deposit extends Transaction {
     public Deposit(int depositAmount) {
-        amount = depositAmount;
-    }
-
-    public String getReference() {
-        return "Reference";
-    }
-
-    public int getAmount() {
-        return amount;
+        super(depositAmount);
     }
 }

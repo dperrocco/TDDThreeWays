@@ -7,33 +7,32 @@ import static org.hamcrest.core.Is.is;
 import static org.hamcrest.core.IsEqual.equalTo;
 import static org.junit.Assert.assertThat;
 
-public class TestDeposit {
-
-    private Deposit deposit;
+public class TestWithdrawl {
+    private Withdrawl withdrawl;
 
     @Before
-    public void setUp(){
-        deposit = new Deposit(25);
+    public void setUp() {
+        withdrawl = new Withdrawl(25);
     }
 
     @Test
-    public void testThatDepositHasDescription() {
+    public void testThatWithdrawlHasDescription() {
         String expected = "Reference";
-        String actual = deposit.getReference();
+        String actual = withdrawl.getReference();
         assertThat(actual, is(equalTo(expected)));
     }
 
     @Test
-    public void testThatDepositHasAmount() {
+    public void testThatWithdrawlHasAmount() {
         int expected = 25;
-        int actual = deposit.getAmount();
+        int actual = withdrawl.getAmount();
         assertThat(actual, is(equalTo(expected)));
     }
 
     @Test
-    public void testThatDepositHasDate(){
+    public void testThatWithdrawlHasDate(){
         String expected = "20.06.2019";
-        String actual = deposit.getDate();
+        String actual = withdrawl.getDate();
         assertThat(actual, is(equalTo(expected)));
     }
 }
